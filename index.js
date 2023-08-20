@@ -110,13 +110,13 @@ app.post("/email", async function (request, response) {
   const userdata = numberofemail;
 
   try {
-    
+
     const transporter = nodemailer.createTransport({
       service: "gmail",
       host: "smtp.gmail.com",
       secure: false,
       auth: {
-        user: process.env.EMAIL,
+        user: process.env.EMAIL, 
         pass: process.env.PASSWORD,
       },
     });
